@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.idea",
+    "\\admin",
+    "\\admin\\controllers",
+    "\\admin\\models",
+    "\\admin\\views",
+    "\\application",
+    "\\document",
+    "\\document\\html-admin-lte",
+    "\\views"
+  ],
+  "SelectedNode": "\\views\\LayoutTrangChu.php",
+  "PreviewInSolutionExplorer": false
+}
