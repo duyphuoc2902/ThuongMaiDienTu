@@ -7,7 +7,7 @@
 <div class="top-header" style="background-color: #e3007b;">
   <div class="container">
     <div class="row" >
-      <div class="col-xs-12 col-sm-6 col-md-6" > <span><i class="fa fa-phone"></i> 0123 456 789</span> <span><i class="fa fa-envelope-o"></i> <a href="mailto:huynhngatlt@gmail.com"> samsungshop@gmail.com</a></span> </div>
+      <div class="col-xs-12 col-sm-6 col-md-6" > <span><i class="fa fa-phone"></i> 0123 456 789</span> <span><i class="fa fa-envelope-o"></i> <a href="mailto:huynhngatlt@gmail.com"> huynhngatlt@gmail.com</a></span> </div>
       <div class="col-xs-12 col-sm-6 col-md-6 customer"> 
         <?php if(isset($_SESSION["customer_email"]) == false): ?>
         <span><i class="fa fa-user">&nbsp;</i><a href="index.php?controller=account&action=login">Đăng nhập</a></span>&nbsp; &nbsp;<span><i class="fa fa-user-plus"></i>&nbsp;<a href="index.php?controller=account&action=register">Đăng ký</a></span>
@@ -118,19 +118,13 @@
            ?>
            <?php foreach($categories as $rows): ?>
             <li><a href="index.php?controller=products&action=categories&category_id=<?php echo $rows->id; ?>"><?php echo $rows->name; ?></a></li>
-              <?php 
-                //load cap 2
-                $categoriesSub = $this->modelGetCategoriesSub($rows->id);
-             ?>
-             <?php foreach($categoriesSub as $rowsSub): ?>
-            <li style="padding-left:20px;"><a href="index.php?controller=products&action=categories&category_id=<?php echo $rowsSub->id; ?>"><?php echo $rowsSub->name; ?></a></li>
-              <?php endforeach; ?>
             <?php endforeach; ?>
           </ul>
         </li>
         <li><a href="index.php?controller=cart">Giỏ hàng</a></li>
         <li><a href="index.php?controller=news">Tin tức</a></li>
         <li><a href="index.php?controller=contact">Liên hệ</a></li>
+        <li><a href="index.php?controller=orders">Đơn Hàng</a></li>
       </ul>
       <a href="javascript:void(0);" class="toggle-main-menu hidden-md hidden-lg"> <i class="fa fa-bars"></i> </a>
       <ul class="list-unstyled mobile-main-menu hidden-md hidden-lg" style="display:none">

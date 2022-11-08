@@ -231,11 +231,11 @@ s0.parentNode.insertBefore(s1,s0);
           <i class="fa fa-weixin" aria-hidden="true"></i>
           <span>SMS: 098 148 1368</span>
         </a>
-        <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+        <a href="https://www.facebook.com/profile.php?id=100087392101335" class="mes">
           <i class="fa fa-facebook-square" aria-hidden="true"></i>
           <span>Nhắn tin Facebook</span>
         </a>
-        <a href="http://zalo.me/0981481368" class="zalo">
+        <a href="http://zalo.me/0392396631" class="zalo">
           <i class="fa fa-commenting-o" aria-hidden="true"></i>
           <span>Zalo: 098.148.1368</span>
         </a>

@@ -15,7 +15,7 @@
 			//goi ham cartAdd de them san pham vao gio hang
 			$this->cartAdd($id);
 			//quay tro lai trang gio hang
-		header("location:index.php?controller=cart");
+		header("location:index.php?controller=home");
 		}
 		//hien thi gio hang
 		public function index(){
@@ -32,9 +32,10 @@
 		//xoa toan bo gio hang
 		public function destroy(){
 			//goi ham cartDestroy de xoa gio hang
+			$id = isset($_GET["id"]) ? $_GET["id"] : 0;
 			$this->cartDestroy($id);
 			//quay tro lai trang gio hang
-			header("location:index.php?controller=cart");
+			header("location:index.php?controller=orders");
 		}
 		//cap nhat nhieu san pham
 		public function update(){
@@ -57,7 +58,7 @@
 			else{
 				//goi ham cartCheckOut de thanh toan gio hang
 				$this->cartCheckOut();
-				header("location:index.php?controller=cart");
+				header("location:index.php?controller=orders");
 			}
 		}
 	}

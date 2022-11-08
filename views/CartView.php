@@ -1,6 +1,7 @@
 <?php 
 	//load LayoutTrangChu.php
 	$this->layoutPath = "LayoutTrangTrong.php";
+  session_start();
  ?>
  	<div class="template-cart">
           <form action="index.php?controller=cart&action=update" method="post">
@@ -33,16 +34,18 @@
                   <tr>
                     <td colspan="6"><a href="index.php?controller=cart&action=destroy" class="button pull-left">Xóa tất cả</a> <a href="index.php" class="button pull-right black">Tiếp tục mua hàng</a>
                       <input type="submit" class="button pull-right" value="CẬP NHẬT"></td>
+
                   </tr>
                 </tfoot>
             	<?php endif; ?>
               </table>
             </div>
           </form>
-
-          <?php if($this->cartNumber() > 0): ?>            
+          <?php if($this->cartNumber() > 0): ?>    
             <div class="total-cart"> Tổng tiền thanh toán:
-             <?php echo number_format($this->cartTotal()); ?>₫ <br>
+             <?php echo number_format($this->cartTotal()); 
+             ?>₫ 
+             <br>
              <a href="index.php?controller=cart&action=checkout"  class="button black">Thanh toán trực tiếp</a> 
              
               <br/>
@@ -61,7 +64,7 @@
            
 </div>
 
-<script src="https://www.paypal.com/sdk/js?client-id=AV3J8WChJOGZV608ovPdEx0z0sjSyODS902qgqZiyiK4Ss9vRGBVEBqyLs_DXi3koa59yhawlpEIyygI">
+<script src="https://www.paypal.com/sdk/js?client-id=AczxDFAnI-UXg_IHMcRWiWjAyV43n4FviTThBDG5LP1wI8HRukuskh1VGNvpipHb9swNALagRtDie9pk&currency=USD">
 </script>
 <script>
   var usd = document.getElementById("vnd_to_usd").value;
@@ -91,4 +94,13 @@
   }
 }).render('#paypal-payment-button');
 </script>
+
+<div style = "margin-top: -80px; text-align: center" >
+  <form method = "POST" target = "_blank" action="views/xulythanhtoanMoMoQr.php">
+  <input syle = "shape: pill" type="submit" name="momo" value="Thanh Toán Momo QR code" class = "btn btn-danger">
+</form>
+</div>
+
+
+
 
